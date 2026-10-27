@@ -1,0 +1,4 @@
+numpy==2.2.6
+scipy==1.15.3
+ezc3d==1.7.2
+usd-core==26.8
