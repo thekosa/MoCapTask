@@ -2,7 +2,6 @@
 from dataclasses import replace
 import numpy as np
 from .alignment import marker_indices, pelvis_center
-from .numerics import angular_steps
 
 MARKER_JOINT = {}
 for joint, markers in {
