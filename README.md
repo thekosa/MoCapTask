@@ -42,9 +42,34 @@ All event bounds are **inclusive, zero-based C3D frame indices**.
 The offset is the C3D frame corresponding to the **first sampled USD pose**.
 Marker labels retain their `A1:` namespace; joints retain their full hierarchical tokens.
 
-`--min-confidence 0.90` changes the inclusive reporting threshold.
-The score is a documented heuristic, **not a probability**. Lowering the threshold to
-`0.70` exposes more uncertain discontinuities; it does not make the detector exhaustive.
+The conservative default remains **0.80**. Use `--review-low-confidence` to select
+**0.70** when you explicitly want a larger review queue. On the supplied take this
+produces **25 events**, with the same **+18-frame** offset. The 13 additional events
+are uncorroborated `marker_discontinuity` candidates: their truth is unknown, and they
+require independent review before classifying them as defects or false alarms.
+
+`--min-confidence 0.90` still selects a custom inclusive reporting threshold.
+`--review-low-confidence` is equivalent to `--min-confidence 0.70`; combining those
+two options is an argument error. Both settings filter the same detector output:
+physical thresholds and heuristic score assignments are unchanged.
+The score is a documented heuristic, **not a probability**.
+
+The [synthetic pilot](calibration/README.md) contains 20 known injected events and
+4 clean controls across two analytic motion variants. At 0.70 it detects 20/20
+injected events; at 0.80 it detects 18/20. Both operating points produce zero alarms
+on the four clean controls. These small synthetic results do **not** establish
+precision or recall on real captures.
+
+To request the review queue without replacing the default report:
+
+```powershell
+.\.venv\Scripts\python.exe -m mocap_qc mocap/data/take.c3d mocap/data/take.usd -o out-review --review-low-confidence
+```
+
+To reproduce the pilot, run
+`.\.venv\Scripts\python.exe calibration/evaluate.py`; it regenerates the sweep
+artifacts in `calibration/`. The separate `calibration/original-at-0.70/` report
+is preserved as the supplied-take comparison.
 
 `--max-offset-frames 240` expands the automatic timing search (default: +/-120 C3D frames).
 For static/ambiguous motion or unknown pelvis labels, automatic timing fails explicitly.

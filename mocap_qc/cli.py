@@ -36,11 +36,20 @@ def parser():
         type=Path,
         help="directory for report.json and report.md",
     )
-    result.add_argument(
+    cutoffs = result.add_mutually_exclusive_group()
+    cutoffs.add_argument(
         "--min-confidence",
         type=confidence,
         default=0.80,
         help="minimum heuristic evidence score, inclusive (default: 0.80; not a probability)",
+    )
+    cutoffs.add_argument(
+        "--review-low-confidence",
+        dest="min_confidence",
+        action="store_const",
+        const=0.70,
+        help="review lower-score candidates at cutoff 0.70 (heuristic, not a probability); "
+        "cannot be combined with --min-confidence",
     )
     result.add_argument(
         "--max-offset-frames",

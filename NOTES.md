@@ -96,7 +96,7 @@ Tests also cover known positive, negative, and zero timing offsets; 60/120 Hz sa
 rotated/translated coordinate systems; corrupted root samples; ambiguous stationary
 motion; reordered USD animation joints; parent transforms; inclusive bounds, clipping,
 confidence filtering, JSON schema, deterministic serialization, and read-only CLI execution.
-The final local suite passes **45 tests** on Windows/Python 3.10.11.
+The final local suite passes **53 tests** on Windows/Python 3.10.11.
 These controlled tests verify mechanisms and counterexamples, not population-wide accuracy.
 
 ## Confidence and supplied-take results
@@ -104,6 +104,27 @@ These controlled tests verify mechanisms and counterexamples, not population-wid
 Confidence is a **heuristic evidence score**, not a calibrated probability, accuracy,
 or percentage speed deviation. The inclusive default cutoff **0.80** is printed in the
 human report. Lower-scoring candidates are counted but omitted from both event lists.
+
+`--review-low-confidence` explicitly selects cutoff **0.70** for a larger review
+queue. `--min-confidence` remains a custom numeric override; argparse rejects using
+both options together, including when the numeric value is 0.70. The policy changes
+event selection only, with no changes to physical detector thresholds or scoring.
+Focused tests cover the default, review alias, custom/zero cutoff, both conflict
+orders, report wording, exact JSON keys, and alias equivalence on the supplied take.
+
+The prepared [calibration corpus](calibration/README.md) has 24 paired synthetic
+cases: 20 known injected events and four clean controls, split across two analytic
+motion variants. The evaluator reproduces **20/20 at 0.70** and **18/20 at 0.80**,
+with **zero alarms on the four clean controls** at both settings. Each split shows
+10/10 versus 9/10 detections. The two additional detections are injected low-score
+marker discontinuities. These pilot measurements do not estimate real-world precision,
+recall, or the truth of individual natural-take candidates.
+
+On the supplied take, review mode reports **25 events** with offset **+18**, compared
+with the default 12. All 13 additions are uncorroborated `marker_discontinuity`
+candidates with score 0.70; their status remains unresolved without independent
+expert review. This is why 0.80 remains the default and 0.70 requires explicit selection.
+The comparison report in `calibration/original-at-0.70/` is retained; `out/` uses 0.80.
 
 The score rules are explicit: gaps/invalid joints 1.00, frozen markers 0.98, paired swaps
 0.97, rotation excursions 0.96, isolated rotation jumps 0.86, bone-length changes 0.88.
