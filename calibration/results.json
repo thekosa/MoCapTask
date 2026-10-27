@@ -1,0 +1,2633 @@
+{
+  "description": "Threshold sweep against synthetic injected-event labels; not a real-world accuracy estimate.",
+  "thresholds_are_heuristic_cutoffs_not_probabilities": true,
+  "event_matching": {
+    "same_type_and_targets_required": true,
+    "point_event_tolerance_frames": 1,
+    "interval_event_iou_minimum": 0.5
+  },
+  "case_count": 24,
+  "negative_control_count": 4,
+  "results": [
+    {
+      "threshold": 0.7,
+      "tp": 20,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_alarms_per_minute": 0.0,
+      "negative_control_false_alarms": 0,
+      "reported_events": 20,
+      "event_type_recall": {
+        "gap": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "frozen_marker": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "spike": {
+          "tp": 4,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "label_swap": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "marker_discontinuity": {
+          "tp": 4,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "skeleton_translation_spike": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "rotation_excursion": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "bone_length_change": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        }
+      },
+      "development": {
+        "threshold": 0.7,
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "false_alarms_per_minute": 0.0,
+        "negative_control_false_alarms": 0,
+        "reported_events": 10,
+        "event_type_recall": {
+          "gap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "frozen_marker": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "spike": {
+            "tp": 2,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "label_swap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "marker_discontinuity": {
+            "tp": 2,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "skeleton_translation_spike": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "rotation_excursion": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "bone_length_change": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          }
+        }
+      },
+      "heldout": {
+        "threshold": 0.7,
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "false_alarms_per_minute": 0.0,
+        "negative_control_false_alarms": 0,
+        "reported_events": 10,
+        "event_type_recall": {
+          "gap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "frozen_marker": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "spike": {
+            "tp": 2,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "label_swap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "marker_discontinuity": {
+            "tp": 2,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "skeleton_translation_spike": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "rotation_excursion": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "bone_length_change": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          }
+        }
+      }
+    },
+    {
+      "threshold": 0.75,
+      "tp": 18,
+      "fp": 0,
+      "fn": 2,
+      "precision": 1.0,
+      "recall": 0.9,
+      "f1": 0.9473684210526316,
+      "false_alarms_per_minute": 0.0,
+      "negative_control_false_alarms": 0,
+      "reported_events": 18,
+      "event_type_recall": {
+        "gap": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "frozen_marker": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "spike": {
+          "tp": 4,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "label_swap": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "marker_discontinuity": {
+          "tp": 2,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.5
+        },
+        "skeleton_translation_spike": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "rotation_excursion": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "bone_length_change": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        }
+      },
+      "development": {
+        "threshold": 0.75,
+        "tp": 9,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1": 0.9473684210526316,
+        "false_alarms_per_minute": 0.0,
+        "negative_control_false_alarms": 0,
+        "reported_events": 9,
+        "event_type_recall": {
+          "gap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "frozen_marker": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "spike": {
+            "tp": 2,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "label_swap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "marker_discontinuity": {
+            "tp": 1,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.5
+          },
+          "skeleton_translation_spike": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "rotation_excursion": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "bone_length_change": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          }
+        }
+      },
+      "heldout": {
+        "threshold": 0.75,
+        "tp": 9,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1": 0.9473684210526316,
+        "false_alarms_per_minute": 0.0,
+        "negative_control_false_alarms": 0,
+        "reported_events": 9,
+        "event_type_recall": {
+          "gap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "frozen_marker": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "spike": {
+            "tp": 2,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "label_swap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "marker_discontinuity": {
+            "tp": 1,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.5
+          },
+          "skeleton_translation_spike": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "rotation_excursion": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "bone_length_change": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          }
+        }
+      }
+    },
+    {
+      "threshold": 0.8,
+      "tp": 18,
+      "fp": 0,
+      "fn": 2,
+      "precision": 1.0,
+      "recall": 0.9,
+      "f1": 0.9473684210526316,
+      "false_alarms_per_minute": 0.0,
+      "negative_control_false_alarms": 0,
+      "reported_events": 18,
+      "event_type_recall": {
+        "gap": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "frozen_marker": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "spike": {
+          "tp": 4,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "label_swap": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "marker_discontinuity": {
+          "tp": 2,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.5
+        },
+        "skeleton_translation_spike": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "rotation_excursion": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "bone_length_change": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        }
+      },
+      "development": {
+        "threshold": 0.8,
+        "tp": 9,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1": 0.9473684210526316,
+        "false_alarms_per_minute": 0.0,
+        "negative_control_false_alarms": 0,
+        "reported_events": 9,
+        "event_type_recall": {
+          "gap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "frozen_marker": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "spike": {
+            "tp": 2,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "label_swap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "marker_discontinuity": {
+            "tp": 1,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.5
+          },
+          "skeleton_translation_spike": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "rotation_excursion": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "bone_length_change": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          }
+        }
+      },
+      "heldout": {
+        "threshold": 0.8,
+        "tp": 9,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1": 0.9473684210526316,
+        "false_alarms_per_minute": 0.0,
+        "negative_control_false_alarms": 0,
+        "reported_events": 9,
+        "event_type_recall": {
+          "gap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "frozen_marker": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "spike": {
+            "tp": 2,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "label_swap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "marker_discontinuity": {
+            "tp": 1,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.5
+          },
+          "skeleton_translation_spike": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "rotation_excursion": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "bone_length_change": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          }
+        }
+      }
+    },
+    {
+      "threshold": 0.85,
+      "tp": 18,
+      "fp": 0,
+      "fn": 2,
+      "precision": 1.0,
+      "recall": 0.9,
+      "f1": 0.9473684210526316,
+      "false_alarms_per_minute": 0.0,
+      "negative_control_false_alarms": 0,
+      "reported_events": 18,
+      "event_type_recall": {
+        "gap": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "frozen_marker": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "spike": {
+          "tp": 4,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "label_swap": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "marker_discontinuity": {
+          "tp": 2,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.5
+        },
+        "skeleton_translation_spike": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "rotation_excursion": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "bone_length_change": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        }
+      },
+      "development": {
+        "threshold": 0.85,
+        "tp": 9,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1": 0.9473684210526316,
+        "false_alarms_per_minute": 0.0,
+        "negative_control_false_alarms": 0,
+        "reported_events": 9,
+        "event_type_recall": {
+          "gap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "frozen_marker": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "spike": {
+            "tp": 2,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "label_swap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "marker_discontinuity": {
+            "tp": 1,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.5
+          },
+          "skeleton_translation_spike": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "rotation_excursion": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "bone_length_change": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          }
+        }
+      },
+      "heldout": {
+        "threshold": 0.85,
+        "tp": 9,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1": 0.9473684210526316,
+        "false_alarms_per_minute": 0.0,
+        "negative_control_false_alarms": 0,
+        "reported_events": 9,
+        "event_type_recall": {
+          "gap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "frozen_marker": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "spike": {
+            "tp": 2,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "label_swap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "marker_discontinuity": {
+            "tp": 1,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.5
+          },
+          "skeleton_translation_spike": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "rotation_excursion": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "bone_length_change": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          }
+        }
+      }
+    },
+    {
+      "threshold": 0.86,
+      "tp": 18,
+      "fp": 0,
+      "fn": 2,
+      "precision": 1.0,
+      "recall": 0.9,
+      "f1": 0.9473684210526316,
+      "false_alarms_per_minute": 0.0,
+      "negative_control_false_alarms": 0,
+      "reported_events": 18,
+      "event_type_recall": {
+        "gap": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "frozen_marker": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "spike": {
+          "tp": 4,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "label_swap": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "marker_discontinuity": {
+          "tp": 2,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.5
+        },
+        "skeleton_translation_spike": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "rotation_excursion": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "bone_length_change": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        }
+      },
+      "development": {
+        "threshold": 0.86,
+        "tp": 9,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1": 0.9473684210526316,
+        "false_alarms_per_minute": 0.0,
+        "negative_control_false_alarms": 0,
+        "reported_events": 9,
+        "event_type_recall": {
+          "gap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "frozen_marker": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "spike": {
+            "tp": 2,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "label_swap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "marker_discontinuity": {
+            "tp": 1,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.5
+          },
+          "skeleton_translation_spike": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "rotation_excursion": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "bone_length_change": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          }
+        }
+      },
+      "heldout": {
+        "threshold": 0.86,
+        "tp": 9,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1": 0.9473684210526316,
+        "false_alarms_per_minute": 0.0,
+        "negative_control_false_alarms": 0,
+        "reported_events": 9,
+        "event_type_recall": {
+          "gap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "frozen_marker": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "spike": {
+            "tp": 2,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "label_swap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "marker_discontinuity": {
+            "tp": 1,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.5
+          },
+          "skeleton_translation_spike": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "rotation_excursion": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "bone_length_change": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          }
+        }
+      }
+    },
+    {
+      "threshold": 0.88,
+      "tp": 16,
+      "fp": 0,
+      "fn": 4,
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1": 0.888888888888889,
+      "false_alarms_per_minute": 0.0,
+      "negative_control_false_alarms": 0,
+      "reported_events": 16,
+      "event_type_recall": {
+        "gap": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "frozen_marker": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "spike": {
+          "tp": 4,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "label_swap": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "marker_discontinuity": {
+          "tp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        },
+        "skeleton_translation_spike": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "rotation_excursion": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "bone_length_change": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        }
+      },
+      "development": {
+        "threshold": 0.88,
+        "tp": 8,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1": 0.888888888888889,
+        "false_alarms_per_minute": 0.0,
+        "negative_control_false_alarms": 0,
+        "reported_events": 8,
+        "event_type_recall": {
+          "gap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "frozen_marker": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "spike": {
+            "tp": 2,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "label_swap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "marker_discontinuity": {
+            "tp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "skeleton_translation_spike": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "rotation_excursion": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "bone_length_change": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          }
+        }
+      },
+      "heldout": {
+        "threshold": 0.88,
+        "tp": 8,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1": 0.888888888888889,
+        "false_alarms_per_minute": 0.0,
+        "negative_control_false_alarms": 0,
+        "reported_events": 8,
+        "event_type_recall": {
+          "gap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "frozen_marker": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "spike": {
+            "tp": 2,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "label_swap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "marker_discontinuity": {
+            "tp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "skeleton_translation_spike": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "rotation_excursion": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "bone_length_change": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          }
+        }
+      }
+    },
+    {
+      "threshold": 0.9,
+      "tp": 12,
+      "fp": 0,
+      "fn": 8,
+      "precision": 1.0,
+      "recall": 0.6,
+      "f1": 0.7499999999999999,
+      "false_alarms_per_minute": 0.0,
+      "negative_control_false_alarms": 0,
+      "reported_events": 12,
+      "event_type_recall": {
+        "gap": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "frozen_marker": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "spike": {
+          "tp": 2,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.5
+        },
+        "label_swap": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "marker_discontinuity": {
+          "tp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        },
+        "skeleton_translation_spike": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "rotation_excursion": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "bone_length_change": {
+          "tp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        }
+      },
+      "development": {
+        "threshold": 0.9,
+        "tp": 6,
+        "fp": 0,
+        "fn": 4,
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1": 0.7499999999999999,
+        "false_alarms_per_minute": 0.0,
+        "negative_control_false_alarms": 0,
+        "reported_events": 6,
+        "event_type_recall": {
+          "gap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "frozen_marker": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "spike": {
+            "tp": 1,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.5
+          },
+          "label_swap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "marker_discontinuity": {
+            "tp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "skeleton_translation_spike": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "rotation_excursion": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "bone_length_change": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          }
+        }
+      },
+      "heldout": {
+        "threshold": 0.9,
+        "tp": 6,
+        "fp": 0,
+        "fn": 4,
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1": 0.7499999999999999,
+        "false_alarms_per_minute": 0.0,
+        "negative_control_false_alarms": 0,
+        "reported_events": 6,
+        "event_type_recall": {
+          "gap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "frozen_marker": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "spike": {
+            "tp": 1,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.5
+          },
+          "label_swap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "marker_discontinuity": {
+            "tp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "skeleton_translation_spike": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "rotation_excursion": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "bone_length_change": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          }
+        }
+      }
+    },
+    {
+      "threshold": 0.93,
+      "tp": 12,
+      "fp": 0,
+      "fn": 8,
+      "precision": 1.0,
+      "recall": 0.6,
+      "f1": 0.7499999999999999,
+      "false_alarms_per_minute": 0.0,
+      "negative_control_false_alarms": 0,
+      "reported_events": 12,
+      "event_type_recall": {
+        "gap": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "frozen_marker": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "spike": {
+          "tp": 2,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.5
+        },
+        "label_swap": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "marker_discontinuity": {
+          "tp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        },
+        "skeleton_translation_spike": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "rotation_excursion": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "bone_length_change": {
+          "tp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        }
+      },
+      "development": {
+        "threshold": 0.93,
+        "tp": 6,
+        "fp": 0,
+        "fn": 4,
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1": 0.7499999999999999,
+        "false_alarms_per_minute": 0.0,
+        "negative_control_false_alarms": 0,
+        "reported_events": 6,
+        "event_type_recall": {
+          "gap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "frozen_marker": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "spike": {
+            "tp": 1,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.5
+          },
+          "label_swap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "marker_discontinuity": {
+            "tp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "skeleton_translation_spike": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "rotation_excursion": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "bone_length_change": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          }
+        }
+      },
+      "heldout": {
+        "threshold": 0.93,
+        "tp": 6,
+        "fp": 0,
+        "fn": 4,
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1": 0.7499999999999999,
+        "false_alarms_per_minute": 0.0,
+        "negative_control_false_alarms": 0,
+        "reported_events": 6,
+        "event_type_recall": {
+          "gap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "frozen_marker": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "spike": {
+            "tp": 1,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.5
+          },
+          "label_swap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "marker_discontinuity": {
+            "tp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "skeleton_translation_spike": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "rotation_excursion": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "bone_length_change": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          }
+        }
+      }
+    },
+    {
+      "threshold": 0.95,
+      "tp": 10,
+      "fp": 0,
+      "fn": 10,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "false_alarms_per_minute": 0.0,
+      "negative_control_false_alarms": 0,
+      "reported_events": 10,
+      "event_type_recall": {
+        "gap": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "frozen_marker": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "spike": {
+          "tp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        },
+        "label_swap": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "marker_discontinuity": {
+          "tp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        },
+        "skeleton_translation_spike": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "rotation_excursion": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "bone_length_change": {
+          "tp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        }
+      },
+      "development": {
+        "threshold": 0.95,
+        "tp": 5,
+        "fp": 0,
+        "fn": 5,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "false_alarms_per_minute": 0.0,
+        "negative_control_false_alarms": 0,
+        "reported_events": 5,
+        "event_type_recall": {
+          "gap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "frozen_marker": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "spike": {
+            "tp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "label_swap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "marker_discontinuity": {
+            "tp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "skeleton_translation_spike": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "rotation_excursion": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "bone_length_change": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          }
+        }
+      },
+      "heldout": {
+        "threshold": 0.95,
+        "tp": 5,
+        "fp": 0,
+        "fn": 5,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "false_alarms_per_minute": 0.0,
+        "negative_control_false_alarms": 0,
+        "reported_events": 5,
+        "event_type_recall": {
+          "gap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "frozen_marker": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "spike": {
+            "tp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "label_swap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "marker_discontinuity": {
+            "tp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "skeleton_translation_spike": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "rotation_excursion": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "bone_length_change": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          }
+        }
+      }
+    },
+    {
+      "threshold": 0.97,
+      "tp": 6,
+      "fp": 0,
+      "fn": 14,
+      "precision": 1.0,
+      "recall": 0.3,
+      "f1": 0.4615384615384615,
+      "false_alarms_per_minute": 0.0,
+      "negative_control_false_alarms": 0,
+      "reported_events": 6,
+      "event_type_recall": {
+        "gap": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "frozen_marker": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "spike": {
+          "tp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        },
+        "label_swap": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "marker_discontinuity": {
+          "tp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        },
+        "skeleton_translation_spike": {
+          "tp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "rotation_excursion": {
+          "tp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bone_length_change": {
+          "tp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        }
+      },
+      "development": {
+        "threshold": 0.97,
+        "tp": 3,
+        "fp": 0,
+        "fn": 7,
+        "precision": 1.0,
+        "recall": 0.3,
+        "f1": 0.4615384615384615,
+        "false_alarms_per_minute": 0.0,
+        "negative_control_false_alarms": 0,
+        "reported_events": 3,
+        "event_type_recall": {
+          "gap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "frozen_marker": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "spike": {
+            "tp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "label_swap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "marker_discontinuity": {
+            "tp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "skeleton_translation_spike": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "rotation_excursion": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bone_length_change": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          }
+        }
+      },
+      "heldout": {
+        "threshold": 0.97,
+        "tp": 3,
+        "fp": 0,
+        "fn": 7,
+        "precision": 1.0,
+        "recall": 0.3,
+        "f1": 0.4615384615384615,
+        "false_alarms_per_minute": 0.0,
+        "negative_control_false_alarms": 0,
+        "reported_events": 3,
+        "event_type_recall": {
+          "gap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "frozen_marker": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "spike": {
+            "tp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "label_swap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "marker_discontinuity": {
+            "tp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "skeleton_translation_spike": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "rotation_excursion": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bone_length_change": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          }
+        }
+      }
+    },
+    {
+      "threshold": 0.98,
+      "tp": 4,
+      "fp": 0,
+      "fn": 16,
+      "precision": 1.0,
+      "recall": 0.2,
+      "f1": 0.33333333333333337,
+      "false_alarms_per_minute": 0.0,
+      "negative_control_false_alarms": 0,
+      "reported_events": 4,
+      "event_type_recall": {
+        "gap": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "frozen_marker": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "spike": {
+          "tp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        },
+        "label_swap": {
+          "tp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "marker_discontinuity": {
+          "tp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        },
+        "skeleton_translation_spike": {
+          "tp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "rotation_excursion": {
+          "tp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bone_length_change": {
+          "tp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        }
+      },
+      "development": {
+        "threshold": 0.98,
+        "tp": 2,
+        "fp": 0,
+        "fn": 8,
+        "precision": 1.0,
+        "recall": 0.2,
+        "f1": 0.33333333333333337,
+        "false_alarms_per_minute": 0.0,
+        "negative_control_false_alarms": 0,
+        "reported_events": 2,
+        "event_type_recall": {
+          "gap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "frozen_marker": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "spike": {
+            "tp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "label_swap": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "marker_discontinuity": {
+            "tp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "skeleton_translation_spike": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "rotation_excursion": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bone_length_change": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          }
+        }
+      },
+      "heldout": {
+        "threshold": 0.98,
+        "tp": 2,
+        "fp": 0,
+        "fn": 8,
+        "precision": 1.0,
+        "recall": 0.2,
+        "f1": 0.33333333333333337,
+        "false_alarms_per_minute": 0.0,
+        "negative_control_false_alarms": 0,
+        "reported_events": 2,
+        "event_type_recall": {
+          "gap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "frozen_marker": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "spike": {
+            "tp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "label_swap": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "marker_discontinuity": {
+            "tp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "skeleton_translation_spike": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "rotation_excursion": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bone_length_change": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          }
+        }
+      }
+    },
+    {
+      "threshold": 0.99,
+      "tp": 2,
+      "fp": 0,
+      "fn": 18,
+      "precision": 1.0,
+      "recall": 0.1,
+      "f1": 0.18181818181818182,
+      "false_alarms_per_minute": 0.0,
+      "negative_control_false_alarms": 0,
+      "reported_events": 2,
+      "event_type_recall": {
+        "gap": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "frozen_marker": {
+          "tp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "spike": {
+          "tp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        },
+        "label_swap": {
+          "tp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "marker_discontinuity": {
+          "tp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        },
+        "skeleton_translation_spike": {
+          "tp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "rotation_excursion": {
+          "tp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bone_length_change": {
+          "tp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        }
+      },
+      "development": {
+        "threshold": 0.99,
+        "tp": 1,
+        "fp": 0,
+        "fn": 9,
+        "precision": 1.0,
+        "recall": 0.1,
+        "f1": 0.18181818181818182,
+        "false_alarms_per_minute": 0.0,
+        "negative_control_false_alarms": 0,
+        "reported_events": 1,
+        "event_type_recall": {
+          "gap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "frozen_marker": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "spike": {
+            "tp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "label_swap": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "marker_discontinuity": {
+            "tp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "skeleton_translation_spike": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "rotation_excursion": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bone_length_change": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          }
+        }
+      },
+      "heldout": {
+        "threshold": 0.99,
+        "tp": 1,
+        "fp": 0,
+        "fn": 9,
+        "precision": 1.0,
+        "recall": 0.1,
+        "f1": 0.18181818181818182,
+        "false_alarms_per_minute": 0.0,
+        "negative_control_false_alarms": 0,
+        "reported_events": 1,
+        "event_type_recall": {
+          "gap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "frozen_marker": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "spike": {
+            "tp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "label_swap": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "marker_discontinuity": {
+            "tp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "skeleton_translation_spike": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "rotation_excursion": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bone_length_change": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          }
+        }
+      }
+    },
+    {
+      "threshold": 1.0,
+      "tp": 2,
+      "fp": 0,
+      "fn": 18,
+      "precision": 1.0,
+      "recall": 0.1,
+      "f1": 0.18181818181818182,
+      "false_alarms_per_minute": 0.0,
+      "negative_control_false_alarms": 0,
+      "reported_events": 2,
+      "event_type_recall": {
+        "gap": {
+          "tp": 2,
+          "fn": 0,
+          "precision": null,
+          "recall": 1.0
+        },
+        "frozen_marker": {
+          "tp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "spike": {
+          "tp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        },
+        "label_swap": {
+          "tp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "marker_discontinuity": {
+          "tp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0
+        },
+        "skeleton_translation_spike": {
+          "tp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "rotation_excursion": {
+          "tp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        },
+        "bone_length_change": {
+          "tp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0
+        }
+      },
+      "development": {
+        "threshold": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 9,
+        "precision": 1.0,
+        "recall": 0.1,
+        "f1": 0.18181818181818182,
+        "false_alarms_per_minute": 0.0,
+        "negative_control_false_alarms": 0,
+        "reported_events": 1,
+        "event_type_recall": {
+          "gap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "frozen_marker": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "spike": {
+            "tp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "label_swap": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "marker_discontinuity": {
+            "tp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "skeleton_translation_spike": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "rotation_excursion": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bone_length_change": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          }
+        }
+      },
+      "heldout": {
+        "threshold": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 9,
+        "precision": 1.0,
+        "recall": 0.1,
+        "f1": 0.18181818181818182,
+        "false_alarms_per_minute": 0.0,
+        "negative_control_false_alarms": 0,
+        "reported_events": 1,
+        "event_type_recall": {
+          "gap": {
+            "tp": 1,
+            "fn": 0,
+            "precision": null,
+            "recall": 1.0
+          },
+          "frozen_marker": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "spike": {
+            "tp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "label_swap": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "marker_discontinuity": {
+            "tp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0
+          },
+          "skeleton_translation_spike": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "rotation_excursion": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          },
+          "bone_length_change": {
+            "tp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0
+          }
+        }
+      }
+    }
+  ],
+  "candidates": [
+    {
+      "case_id": "development_gap",
+      "split": "development",
+      "type": "gap",
+      "targets": "A1:RTOE",
+      "start": 120,
+      "end": 150,
+      "confidence": 1.0,
+      "known_injected_event": true
+    },
+    {
+      "case_id": "development_frozen_marker",
+      "split": "development",
+      "type": "frozen_marker",
+      "targets": "A1:LELB",
+      "start": 120,
+      "end": 180,
+      "confidence": 0.98,
+      "known_injected_event": true
+    },
+    {
+      "case_id": "development_spike_small",
+      "split": "development",
+      "type": "spike",
+      "targets": "A1:LFHD",
+      "start": 160,
+      "end": 161,
+      "confidence": 0.88,
+      "known_injected_event": true
+    },
+    {
+      "case_id": "development_spike_large",
+      "split": "development",
+      "type": "spike",
+      "targets": "A1:LFHD",
+      "start": 160,
+      "end": 161,
+      "confidence": 0.93,
+      "known_injected_event": true
+    },
+    {
+      "case_id": "development_label_swap",
+      "split": "development",
+      "type": "label_swap",
+      "targets": "A1:LIWR,A1:LOWR",
+      "start": 150,
+      "end": 210,
+      "confidence": 0.97,
+      "known_injected_event": true
+    },
+    {
+      "case_id": "development_marker_step",
+      "split": "development",
+      "type": "marker_discontinuity",
+      "targets": "A1:RRNG6",
+      "start": 240,
+      "end": 240,
+      "confidence": 0.86,
+      "known_injected_event": true
+    },
+    {
+      "case_id": "development_root_spike",
+      "split": "development",
+      "type": "skeleton_translation_spike",
+      "targets": "Hips",
+      "start": 200,
+      "end": 200,
+      "confidence": 0.96,
+      "known_injected_event": true
+    },
+    {
+      "case_id": "development_rotation_excursion",
+      "split": "development",
+      "type": "rotation_excursion",
+      "targets": "Hips/Spine/RightForeArm",
+      "start": 170,
+      "end": 185,
+      "confidence": 0.96,
+      "known_injected_event": true
+    },
+    {
+      "case_id": "development_bone_length_change",
+      "split": "development",
+      "type": "bone_length_change",
+      "targets": "Hips/Spine,Hips/Spine/LeftForeArm",
+      "start": 240,
+      "end": 250,
+      "confidence": 0.88,
+      "known_injected_event": true
+    },
+    {
+      "case_id": "development_marker_step_soft",
+      "split": "development",
+      "type": "marker_discontinuity",
+      "targets": "A1:RRNG6",
+      "start": 240,
+      "end": 240,
+      "confidence": 0.7,
+      "known_injected_event": true
+    },
+    {
+      "case_id": "heldout_gap",
+      "split": "heldout",
+      "type": "gap",
+      "targets": "A1:RTOE",
+      "start": 120,
+      "end": 150,
+      "confidence": 1.0,
+      "known_injected_event": true
+    },
+    {
+      "case_id": "heldout_frozen_marker",
+      "split": "heldout",
+      "type": "frozen_marker",
+      "targets": "A1:LELB",
+      "start": 120,
+      "end": 180,
+      "confidence": 0.98,
+      "known_injected_event": true
+    },
+    {
+      "case_id": "heldout_spike_small",
+      "split": "heldout",
+      "type": "spike",
+      "targets": "A1:LFHD",
+      "start": 160,
+      "end": 161,
+      "confidence": 0.88,
+      "known_injected_event": true
+    },
+    {
+      "case_id": "heldout_spike_large",
+      "split": "heldout",
+      "type": "spike",
+      "targets": "A1:LFHD",
+      "start": 160,
+      "end": 161,
+      "confidence": 0.93,
+      "known_injected_event": true
+    },
+    {
+      "case_id": "heldout_label_swap",
+      "split": "heldout",
+      "type": "label_swap",
+      "targets": "A1:LIWR,A1:LOWR",
+      "start": 150,
+      "end": 210,
+      "confidence": 0.97,
+      "known_injected_event": true
+    },
+    {
+      "case_id": "heldout_marker_step",
+      "split": "heldout",
+      "type": "marker_discontinuity",
+      "targets": "A1:RRNG6",
+      "start": 240,
+      "end": 240,
+      "confidence": 0.86,
+      "known_injected_event": true
+    },
+    {
+      "case_id": "heldout_root_spike",
+      "split": "heldout",
+      "type": "skeleton_translation_spike",
+      "targets": "Hips",
+      "start": 200,
+      "end": 200,
+      "confidence": 0.96,
+      "known_injected_event": true
+    },
+    {
+      "case_id": "heldout_rotation_excursion",
+      "split": "heldout",
+      "type": "rotation_excursion",
+      "targets": "Hips/Spine/RightForeArm",
+      "start": 170,
+      "end": 185,
+      "confidence": 0.96,
+      "known_injected_event": true
+    },
+    {
+      "case_id": "heldout_bone_length_change",
+      "split": "heldout",
+      "type": "bone_length_change",
+      "targets": "Hips/Spine,Hips/Spine/LeftForeArm",
+      "start": 240,
+      "end": 250,
+      "confidence": 0.88,
+      "known_injected_event": true
+    },
+    {
+      "case_id": "heldout_marker_step_soft",
+      "split": "heldout",
+      "type": "marker_discontinuity",
+      "targets": "A1:RRNG6",
+      "start": 240,
+      "end": 240,
+      "confidence": 0.7,
+      "known_injected_event": true
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "skel_to_c3d_offset_frames": 18,
+  "events": [
+    {
+      "type": "marker_discontinuity",
+      "targets": [
+        "A1:LRNG6"
+      ],
+      "start": 232,
+      "end": 232,
+      "confidence": 0.7,
+      "note": "Estimated position step 21.0 mm between locally smooth tracks (fit RMS 0.61 mm; 0 stable-distance references corroborate it). The cause and which side is correct require review."
+    },
+    {
+      "type": "spike",
+      "targets": [
+        "A1:LFHD"
+      ],
+      "start": 300,
+      "end": 301,
+      "confidence": 0.95,
+      "note": "Short excursion 45.0 mm from the local bridge; opposing entry/exit jumps and quiet surrounding samples (minimum amplitude 15.0 mm). Aligned Head joint-origin bridge deviation: 0.4 mm."
+    },
+    {
+      "type": "frozen_marker",
+      "targets": [
+        "A1:LELB"
+      ],
+      "start": 1000,
+      "end": 1060,
+      "confidence": 0.98,
+      "note": "XYZ repeats to 1 nm for 61 samples while nearby markers move a median 468.8 mm between the endpoints, with a discontinuous entry/release. Possible held samples."
+    },
+    {
+      "type": "marker_discontinuity",
+      "targets": [
+        "A1:RRNG3"
+      ],
+      "start": 1037,
+      "end": 1037,
+      "confidence": 0.7,
+      "note": "Estimated position step 19.3 mm between locally smooth tracks (fit RMS 1.08 mm; 0 stable-distance references corroborate it). The cause and which side is correct require review."
+    },
+    {
+      "type": "rotation_excursion",
+      "targets": [
+        "Hips/Spine/Spine1/Spine2/Spine3/RightShoulder/RightArm/RightForeArm"
+      ],
+      "start": 1200,
+      "end": 1215,
+      "confidence": 0.97,
+      "note": "Joint-local orientation changes by up to 180.0 degrees between samples (threshold 35.0); quaternion sign changes are ignored. Across the aligned interval, the two wrist markers change their connecting-axis direction by at most 0.4 degrees per C3D frame."
+    },
+    {
+      "type": "marker_discontinuity",
+      "targets": [
+        "A1:RRNG6"
+      ],
+      "start": 1296,
+      "end": 1296,
+      "confidence": 0.7,
+      "note": "Estimated position step 21.2 mm between locally smooth tracks (fit RMS 1.43 mm; 0 stable-distance references corroborate it). The cause and which side is correct require review."
+    },
+    {
+      "type": "spike",
+      "targets": [
+        "A1:RIWR"
+      ],
+      "start": 1377,
+      "end": 1377,
+      "confidence": 0.9,
+      "note": "Short excursion 24.7 mm from the local bridge; opposing entry/exit jumps and quiet surrounding samples (minimum amplitude 15.0 mm). Aligned RightHand joint-origin bridge deviation: 0.2 mm."
+    },
+    {
+      "type": "spike",
+      "targets": [
+        "A1:RKNE"
+      ],
+      "start": 1450,
+      "end": 1450,
+      "confidence": 0.95,
+      "note": "Short excursion 30.2 mm from the local bridge; opposing entry/exit jumps and quiet surrounding samples (minimum amplitude 15.0 mm). Aligned RightLeg joint-origin bridge deviation: 0.3 mm."
+    },
+    {
+      "type": "marker_discontinuity",
+      "targets": [
+        "A1:RMID6"
+      ],
+      "start": 1707,
+      "end": 1707,
+      "confidence": 0.7,
+      "note": "Estimated position step 27.1 mm between locally smooth tracks (fit RMS 0.80 mm; 0 stable-distance references corroborate it). The cause and which side is correct require review."
+    },
+    {
+      "type": "marker_discontinuity",
+      "targets": [
+        "A1:RRNG6"
+      ],
+      "start": 1707,
+      "end": 1707,
+      "confidence": 0.86,
+      "note": "Estimated position step 46.6 mm between locally smooth tracks (fit RMS 0.45 mm; 0 stable-distance references corroborate it). The cause and which side is correct require review."
+    },
+    {
+      "type": "marker_discontinuity",
+      "targets": [
+        "A1:LMID6"
+      ],
+      "start": 1760,
+      "end": 1760,
+      "confidence": 0.7,
+      "note": "Estimated position step 25.0 mm between locally smooth tracks (fit RMS 1.02 mm; 0 stable-distance references corroborate it). The cause and which side is correct require review."
+    },
+    {
+      "type": "marker_discontinuity",
+      "targets": [
+        "A1:LPNK6"
+      ],
+      "start": 1760,
+      "end": 1760,
+      "confidence": 0.7,
+      "note": "Estimated position step 27.5 mm between locally smooth tracks (fit RMS 1.58 mm; 0 stable-distance references corroborate it). The cause and which side is correct require review."
+    },
+    {
+      "type": "marker_discontinuity",
+      "targets": [
+        "A1:LRNG6"
+      ],
+      "start": 1760,
+      "end": 1760,
+      "confidence": 0.7,
+      "note": "Estimated position step 30.7 mm between locally smooth tracks (fit RMS 1.26 mm; 0 stable-distance references corroborate it). The cause and which side is correct require review."
+    },
+    {
+      "type": "marker_discontinuity",
+      "targets": [
+        "A1:CLAV"
+      ],
+      "start": 1778,
+      "end": 1778,
+      "confidence": 0.86,
+      "note": "Estimated position step 115.2 mm between locally smooth tracks (fit RMS 0.37 mm; 0 stable-distance references corroborate it). The cause and which side is correct require review."
+    },
+    {
+      "type": "marker_discontinuity",
+      "targets": [
+        "A1:RRNG6"
+      ],
+      "start": 1925,
+      "end": 1925,
+      "confidence": 0.7,
+      "note": "Estimated position step 33.4 mm between locally smooth tracks (fit RMS 1.82 mm; 0 stable-distance references corroborate it). The cause and which side is correct require review."
+    },
+    {
+      "type": "marker_discontinuity",
+      "targets": [
+        "A1:LRNG6"
+      ],
+      "start": 1933,
+      "end": 1933,
+      "confidence": 0.7,
+      "note": "Estimated position step 18.3 mm between locally smooth tracks (fit RMS 1.21 mm; 0 stable-distance references corroborate it). The cause and which side is correct require review."
+    },
+    {
+      "type": "skeleton_translation_spike",
+      "targets": [
+        "Hips"
+      ],
+      "start": 2000,
+      "end": 2000,
+      "confidence": 0.96,
+      "note": "Short excursion 60.1 mm from the local bridge; opposing entry/exit jumps and quiet surrounding samples (minimum amplitude 15.0 mm). Aligned pelvis-marker centroid bridge deviation: 0.1 mm. This supports a skeleton-only excursion."
+    },
+    {
+      "type": "marker_discontinuity",
+      "targets": [
+        "A1:RPNK6"
+      ],
+      "start": 2160,
+      "end": 2160,
+      "confidence": 0.7,
+      "note": "Estimated position step 23.1 mm between locally smooth tracks (fit RMS 1.25 mm; 0 stable-distance references corroborate it). The cause and which side is correct require review."
+    },
+    {
+      "type": "label_swap",
+      "targets": [
+        "A1:LIWR",
+        "A1:LOWR"
+      ],
+      "start": 2200,
+      "end": 2260,
+      "confidence": 0.97,
+      "note": "At both interval boundaries, exchanging these two marker labels reduces the linear continuation error by at least 80%; the labels return afterward."
+    },
+    {
+      "type": "gap",
+      "targets": [
+        "A1:RTOE"
+      ],
+      "start": 2600,
+      "end": 2660,
+      "confidence": 1.0,
+      "note": "61 invalid samples (0.508 s): negative/non-finite residual or non-finite XYZ."
+    },
+    {
+      "type": "marker_discontinuity",
+      "targets": [
+        "A1:T145_cluster_LCM_5"
+      ],
+      "start": 2665,
+      "end": 2665,
+      "confidence": 0.88,
+      "note": "Estimated position step 18.4 mm between locally smooth tracks (fit RMS 1.43 mm; 3 stable-distance references corroborate it). The cause and which side is correct require review."
+    },
+    {
+      "type": "marker_discontinuity",
+      "targets": [
+        "A1:LMID6"
+      ],
+      "start": 2755,
+      "end": 2755,
+      "confidence": 0.7,
+      "note": "Estimated position step 26.1 mm between locally smooth tracks (fit RMS 0.83 mm; 0 stable-distance references corroborate it). The cause and which side is correct require review."
+    },
+    {
+      "type": "marker_discontinuity",
+      "targets": [
+        "A1:RRNG6"
+      ],
+      "start": 2872,
+      "end": 2872,
+      "confidence": 0.7,
+      "note": "Estimated position step 31.6 mm between locally smooth tracks (fit RMS 1.35 mm; 0 stable-distance references corroborate it). The cause and which side is correct require review."
+    },
+    {
+      "type": "marker_discontinuity",
+      "targets": [
+        "A1:LMID6"
+      ],
+      "start": 2887,
+      "end": 2887,
+      "confidence": 0.7,
+      "note": "Estimated position step 26.9 mm between locally smooth tracks (fit RMS 0.77 mm; 0 stable-distance references corroborate it). The cause and which side is correct require review."
+    },
+    {
+      "type": "marker_discontinuity",
+      "targets": [
+        "A1:RTHI"
+      ],
+      "start": 3000,
+      "end": 3000,
+      "confidence": 0.86,
+      "note": "Estimated position step 20.1 mm between locally smooth tracks (fit RMS 0.19 mm; 0 stable-distance references corroborate it). The cause and which side is correct require review."
+    }
+  ]
+}

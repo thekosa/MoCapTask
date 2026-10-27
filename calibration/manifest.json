@@ -1,0 +1,519 @@
+{
+  "schema_version": 1,
+  "description": "Paired synthetic C3D/USD calibration corpus with exact labels for injected defects.",
+  "units": "C3D millimetres; USD metres",
+  "sampling": {
+    "rate_hz": 120,
+    "frames": 480,
+    "duration_seconds": 4.0
+  },
+  "split_policy": "development and heldout use different analytic motion variants; no source take is shared across splits.",
+  "matching_policy": {
+    "same_type_and_targets_required": true,
+    "point_event_tolerance_frames": 1,
+    "interval_event_iou_minimum": 0.5
+  },
+  "limitations": [
+    "The baselines are analytic motion, not expert-cleaned human captures.",
+    "Injected events provide exact type/target/frame labels but do not reproduce all real capture faults.",
+    "Results are a reproducible smoke-calibration study, not a real-world precision/recall claim."
+  ],
+  "cases": [
+    {
+      "case_id": "development_clean_smooth",
+      "split": "development",
+      "motion_id": "motion_variant_0",
+      "kind": "negative_control",
+      "c3d": "data/development/clean_smooth.c3d",
+      "usd": "data/development/clean_smooth.usdc",
+      "rate_hz": 120,
+      "frames": 480,
+      "offset_frames": 0,
+      "known_events": [],
+      "notes": "Clean analytic baseline; no injected defects."
+    },
+    {
+      "case_id": "development_clean_fast",
+      "split": "development",
+      "motion_id": "motion_variant_0",
+      "kind": "negative_control",
+      "c3d": "data/development/clean_fast.c3d",
+      "usd": "data/development/clean_fast.usdc",
+      "rate_hz": 120,
+      "frames": 480,
+      "offset_frames": 0,
+      "known_events": [],
+      "notes": "Clean, smooth fast-motion negative control; no defect is injected."
+    },
+    {
+      "case_id": "development_gap",
+      "split": "development",
+      "motion_id": "motion_variant_0",
+      "kind": "injected_defect",
+      "c3d": "data/development/gap.c3d",
+      "usd": "data/development/gap.usdc",
+      "rate_hz": 120,
+      "frames": 480,
+      "offset_frames": 0,
+      "known_events": [
+        {
+          "type": "gap",
+          "targets": [
+            "A1:RTOE"
+          ],
+          "start": 120,
+          "end": 150
+        }
+      ],
+      "notes": "Negative C3D residual injected for the inclusive interval."
+    },
+    {
+      "case_id": "development_frozen_marker",
+      "split": "development",
+      "motion_id": "motion_variant_0",
+      "kind": "injected_defect",
+      "c3d": "data/development/frozen_marker.c3d",
+      "usd": "data/development/frozen_marker.usdc",
+      "rate_hz": 120,
+      "frames": 480,
+      "offset_frames": 0,
+      "known_events": [
+        {
+          "type": "frozen_marker",
+          "targets": [
+            "A1:LELB"
+          ],
+          "start": 120,
+          "end": 180
+        }
+      ],
+      "notes": "A marker track is held at one coordinate for 61 samples."
+    },
+    {
+      "case_id": "development_spike_small",
+      "split": "development",
+      "motion_id": "motion_variant_0",
+      "kind": "injected_defect",
+      "c3d": "data/development/spike_small.c3d",
+      "usd": "data/development/spike_small.usdc",
+      "rate_hz": 120,
+      "frames": 480,
+      "offset_frames": 0,
+      "known_events": [
+        {
+          "type": "spike",
+          "targets": [
+            "A1:LFHD"
+          ],
+          "start": 160,
+          "end": 161
+        }
+      ],
+      "notes": "A two-frame displacement of 22.4 mm is injected."
+    },
+    {
+      "case_id": "development_spike_large",
+      "split": "development",
+      "motion_id": "motion_variant_0",
+      "kind": "injected_defect",
+      "c3d": "data/development/spike_large.c3d",
+      "usd": "data/development/spike_large.usdc",
+      "rate_hz": 120,
+      "frames": 480,
+      "offset_frames": 0,
+      "known_events": [
+        {
+          "type": "spike",
+          "targets": [
+            "A1:LFHD"
+          ],
+          "start": 160,
+          "end": 161
+        }
+      ],
+      "notes": "A two-frame displacement of 50.2 mm is injected."
+    },
+    {
+      "case_id": "development_label_swap",
+      "split": "development",
+      "motion_id": "motion_variant_0",
+      "kind": "injected_defect",
+      "c3d": "data/development/label_swap.c3d",
+      "usd": "data/development/label_swap.usdc",
+      "rate_hz": 120,
+      "frames": 480,
+      "offset_frames": 0,
+      "known_events": [
+        {
+          "type": "label_swap",
+          "targets": [
+            "A1:LIWR",
+            "A1:LOWR"
+          ],
+          "start": 150,
+          "end": 210
+        }
+      ],
+      "notes": "Two marker labels are exchanged for an inclusive 61-frame interval."
+    },
+    {
+      "case_id": "development_marker_step",
+      "split": "development",
+      "motion_id": "motion_variant_0",
+      "kind": "injected_defect",
+      "c3d": "data/development/marker_step.c3d",
+      "usd": "data/development/marker_step.usdc",
+      "rate_hz": 120,
+      "frames": 480,
+      "offset_frames": 0,
+      "known_events": [
+        {
+          "type": "marker_discontinuity",
+          "targets": [
+            "A1:RRNG6"
+          ],
+          "start": 240,
+          "end": 240
+        }
+      ],
+      "notes": "A persistent 27.4 mm marker position step is injected at the boundary."
+    },
+    {
+      "case_id": "development_root_spike",
+      "split": "development",
+      "motion_id": "motion_variant_0",
+      "kind": "injected_defect",
+      "c3d": "data/development/root_spike.c3d",
+      "usd": "data/development/root_spike.usdc",
+      "rate_hz": 120,
+      "frames": 480,
+      "offset_frames": 0,
+      "known_events": [
+        {
+          "type": "skeleton_translation_spike",
+          "targets": [
+            "Hips"
+          ],
+          "start": 200,
+          "end": 200
+        }
+      ],
+      "notes": "A one-sample root translation excursion is injected into the USD animation."
+    },
+    {
+      "case_id": "development_rotation_excursion",
+      "split": "development",
+      "motion_id": "motion_variant_0",
+      "kind": "injected_defect",
+      "c3d": "data/development/rotation_excursion.c3d",
+      "usd": "data/development/rotation_excursion.usdc",
+      "rate_hz": 120,
+      "frames": 480,
+      "offset_frames": 0,
+      "known_events": [
+        {
+          "type": "rotation_excursion",
+          "targets": [
+            "Hips/Spine/RightForeArm"
+          ],
+          "start": 170,
+          "end": 185
+        }
+      ],
+      "notes": "The right forearm local orientation makes a 180-degree excursion and returns."
+    },
+    {
+      "case_id": "development_bone_length_change",
+      "split": "development",
+      "motion_id": "motion_variant_0",
+      "kind": "injected_defect",
+      "c3d": "data/development/bone_length_change.c3d",
+      "usd": "data/development/bone_length_change.usdc",
+      "rate_hz": 120,
+      "frames": 480,
+      "offset_frames": 0,
+      "known_events": [
+        {
+          "type": "bone_length_change",
+          "targets": [
+            "Hips/Spine",
+            "Hips/Spine/LeftForeArm"
+          ],
+          "start": 240,
+          "end": 250
+        }
+      ],
+      "notes": "The left forearm local translation changes by 25 mm for 11 samples."
+    },
+    {
+      "case_id": "development_marker_step_soft",
+      "split": "development",
+      "motion_id": "motion_variant_0",
+      "kind": "injected_defect",
+      "c3d": "data/development/marker_step_soft.c3d",
+      "usd": "data/development/marker_step_soft.usdc",
+      "rate_hz": 120,
+      "frames": 480,
+      "offset_frames": 0,
+      "known_events": [
+        {
+          "type": "marker_discontinuity",
+          "targets": [
+            "A1:RRNG6"
+          ],
+          "start": 240,
+          "end": 240
+        }
+      ],
+      "notes": "A 22 mm step is injected over 0.65 mm measurement jitter; it tests a low-score true positive."
+    },
+    {
+      "case_id": "heldout_clean_smooth",
+      "split": "heldout",
+      "motion_id": "motion_variant_1",
+      "kind": "negative_control",
+      "c3d": "data/heldout/clean_smooth.c3d",
+      "usd": "data/heldout/clean_smooth.usdc",
+      "rate_hz": 120,
+      "frames": 480,
+      "offset_frames": 0,
+      "known_events": [],
+      "notes": "Clean analytic baseline; no injected defects."
+    },
+    {
+      "case_id": "heldout_clean_fast",
+      "split": "heldout",
+      "motion_id": "motion_variant_1",
+      "kind": "negative_control",
+      "c3d": "data/heldout/clean_fast.c3d",
+      "usd": "data/heldout/clean_fast.usdc",
+      "rate_hz": 120,
+      "frames": 480,
+      "offset_frames": 0,
+      "known_events": [],
+      "notes": "Clean, smooth fast-motion negative control; no defect is injected."
+    },
+    {
+      "case_id": "heldout_gap",
+      "split": "heldout",
+      "motion_id": "motion_variant_1",
+      "kind": "injected_defect",
+      "c3d": "data/heldout/gap.c3d",
+      "usd": "data/heldout/gap.usdc",
+      "rate_hz": 120,
+      "frames": 480,
+      "offset_frames": 0,
+      "known_events": [
+        {
+          "type": "gap",
+          "targets": [
+            "A1:RTOE"
+          ],
+          "start": 120,
+          "end": 150
+        }
+      ],
+      "notes": "Negative C3D residual injected for the inclusive interval."
+    },
+    {
+      "case_id": "heldout_frozen_marker",
+      "split": "heldout",
+      "motion_id": "motion_variant_1",
+      "kind": "injected_defect",
+      "c3d": "data/heldout/frozen_marker.c3d",
+      "usd": "data/heldout/frozen_marker.usdc",
+      "rate_hz": 120,
+      "frames": 480,
+      "offset_frames": 0,
+      "known_events": [
+        {
+          "type": "frozen_marker",
+          "targets": [
+            "A1:LELB"
+          ],
+          "start": 120,
+          "end": 180
+        }
+      ],
+      "notes": "A marker track is held at one coordinate for 61 samples."
+    },
+    {
+      "case_id": "heldout_spike_small",
+      "split": "heldout",
+      "motion_id": "motion_variant_1",
+      "kind": "injected_defect",
+      "c3d": "data/heldout/spike_small.c3d",
+      "usd": "data/heldout/spike_small.usdc",
+      "rate_hz": 120,
+      "frames": 480,
+      "offset_frames": 0,
+      "known_events": [
+        {
+          "type": "spike",
+          "targets": [
+            "A1:LFHD"
+          ],
+          "start": 160,
+          "end": 161
+        }
+      ],
+      "notes": "A two-frame displacement of 22.4 mm is injected."
+    },
+    {
+      "case_id": "heldout_spike_large",
+      "split": "heldout",
+      "motion_id": "motion_variant_1",
+      "kind": "injected_defect",
+      "c3d": "data/heldout/spike_large.c3d",
+      "usd": "data/heldout/spike_large.usdc",
+      "rate_hz": 120,
+      "frames": 480,
+      "offset_frames": 0,
+      "known_events": [
+        {
+          "type": "spike",
+          "targets": [
+            "A1:LFHD"
+          ],
+          "start": 160,
+          "end": 161
+        }
+      ],
+      "notes": "A two-frame displacement of 50.2 mm is injected."
+    },
+    {
+      "case_id": "heldout_label_swap",
+      "split": "heldout",
+      "motion_id": "motion_variant_1",
+      "kind": "injected_defect",
+      "c3d": "data/heldout/label_swap.c3d",
+      "usd": "data/heldout/label_swap.usdc",
+      "rate_hz": 120,
+      "frames": 480,
+      "offset_frames": 0,
+      "known_events": [
+        {
+          "type": "label_swap",
+          "targets": [
+            "A1:LIWR",
+            "A1:LOWR"
+          ],
+          "start": 150,
+          "end": 210
+        }
+      ],
+      "notes": "Two marker labels are exchanged for an inclusive 61-frame interval."
+    },
+    {
+      "case_id": "heldout_marker_step",
+      "split": "heldout",
+      "motion_id": "motion_variant_1",
+      "kind": "injected_defect",
+      "c3d": "data/heldout/marker_step.c3d",
+      "usd": "data/heldout/marker_step.usdc",
+      "rate_hz": 120,
+      "frames": 480,
+      "offset_frames": 0,
+      "known_events": [
+        {
+          "type": "marker_discontinuity",
+          "targets": [
+            "A1:RRNG6"
+          ],
+          "start": 240,
+          "end": 240
+        }
+      ],
+      "notes": "A persistent 27.4 mm marker position step is injected at the boundary."
+    },
+    {
+      "case_id": "heldout_root_spike",
+      "split": "heldout",
+      "motion_id": "motion_variant_1",
+      "kind": "injected_defect",
+      "c3d": "data/heldout/root_spike.c3d",
+      "usd": "data/heldout/root_spike.usdc",
+      "rate_hz": 120,
+      "frames": 480,
+      "offset_frames": 0,
+      "known_events": [
+        {
+          "type": "skeleton_translation_spike",
+          "targets": [
+            "Hips"
+          ],
+          "start": 200,
+          "end": 200
+        }
+      ],
+      "notes": "A one-sample root translation excursion is injected into the USD animation."
+    },
+    {
+      "case_id": "heldout_rotation_excursion",
+      "split": "heldout",
+      "motion_id": "motion_variant_1",
+      "kind": "injected_defect",
+      "c3d": "data/heldout/rotation_excursion.c3d",
+      "usd": "data/heldout/rotation_excursion.usdc",
+      "rate_hz": 120,
+      "frames": 480,
+      "offset_frames": 0,
+      "known_events": [
+        {
+          "type": "rotation_excursion",
+          "targets": [
+            "Hips/Spine/RightForeArm"
+          ],
+          "start": 170,
+          "end": 185
+        }
+      ],
+      "notes": "The right forearm local orientation makes a 180-degree excursion and returns."
+    },
+    {
+      "case_id": "heldout_bone_length_change",
+      "split": "heldout",
+      "motion_id": "motion_variant_1",
+      "kind": "injected_defect",
+      "c3d": "data/heldout/bone_length_change.c3d",
+      "usd": "data/heldout/bone_length_change.usdc",
+      "rate_hz": 120,
+      "frames": 480,
+      "offset_frames": 0,
+      "known_events": [
+        {
+          "type": "bone_length_change",
+          "targets": [
+            "Hips/Spine",
+            "Hips/Spine/LeftForeArm"
+          ],
+          "start": 240,
+          "end": 250
+        }
+      ],
+      "notes": "The left forearm local translation changes by 25 mm for 11 samples."
+    },
+    {
+      "case_id": "heldout_marker_step_soft",
+      "split": "heldout",
+      "motion_id": "motion_variant_1",
+      "kind": "injected_defect",
+      "c3d": "data/heldout/marker_step_soft.c3d",
+      "usd": "data/heldout/marker_step_soft.usdc",
+      "rate_hz": 120,
+      "frames": 480,
+      "offset_frames": 0,
+      "known_events": [
+        {
+          "type": "marker_discontinuity",
+          "targets": [
+            "A1:RRNG6"
+          ],
+          "start": 240,
+          "end": 240
+        }
+      ],
+      "notes": "A 22 mm step is injected over 0.65 mm measurement jitter; it tests a low-score true positive."
+    }
+  ]
+}
