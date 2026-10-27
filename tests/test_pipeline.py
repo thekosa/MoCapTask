@@ -16,12 +16,12 @@ def stub_inputs(monkeypatch):
 def test_threshold_is_inclusive_and_events_are_sorted(monkeypatch):
     stub_inputs(monkeypatch)
     events = [
-        Event("test", ("A1:P0",), 80, 80, .8, "at threshold"),
-        Event("test", ("A1:P1",), 10, 10, .9, "earlier"),
-        Event("test", ("A1:P2",), 20, 20, .799, "below"),
+        Event("test", ("A1:P0",), 80, 80, 0.8, "at threshold"),
+        Event("test", ("A1:P1",), 10, 10, 0.9, "earlier"),
+        Event("test", ("A1:P2",), 20, 20, 0.799, "below"),
     ]
     monkeypatch.setattr(pipeline, "detect_markers", lambda take: events)
-    result = pipeline.analyze("a", "b", offset_frames=18, min_confidence=.8)
+    result = pipeline.analyze("a", "b", offset_frames=18, min_confidence=0.8)
     assert [e.start for e in result.events] == [10, 80]
     assert result.candidate_count == 3
     assert result.alignment.offset == 18

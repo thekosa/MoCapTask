@@ -41,8 +41,14 @@ class Event:
     note: str
 
     def as_dict(self):
-        return dict(type=self.type, targets=list(self.targets), start=int(self.start),
-                    end=int(self.end), confidence=round(float(self.confidence), 3), note=self.note)
+        return dict(
+            type=self.type,
+            targets=list(self.targets),
+            start=int(self.start),
+            end=int(self.end),
+            confidence=round(float(self.confidence), 3),
+            note=self.note,
+        )
 
 
 @dataclass

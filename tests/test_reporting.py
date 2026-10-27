@@ -10,13 +10,26 @@ from conftest import make_markers, make_skeleton
 
 
 def test_exact_schema_and_human_threshold(tmp_path):
-    analysis = Analysis(make_markers(), make_skeleton(), Alignment(18, "test", .9),
-                        [Event("spike", ("A1:P0",), 120, 121, .88, "24 mm excursion.")], .8, 3)
+    analysis = Analysis(
+        make_markers(),
+        make_skeleton(),
+        Alignment(18, "test", 0.9),
+        [Event("spike", ("A1:P0",), 120, 121, 0.88, "24 mm excursion.")],
+        0.8,
+        3,
+    )
     write_reports(analysis, tmp_path)
     data = json.loads((tmp_path / "report.json").read_text(encoding="utf-8"))
     assert set(data) == {"skel_to_c3d_offset_frames", "events"}
     assert data["skel_to_c3d_offset_frames"] == 18
-    assert set(data["events"][0]) == {"type", "targets", "start", "end", "confidence", "note"}
+    assert set(data["events"][0]) == {
+        "type",
+        "targets",
+        "start",
+        "end",
+        "confidence",
+        "note",
+    }
     text = (tmp_path / "report.md").read_text(encoding="utf-8")
     assert "confidence >= 80%" in text
     assert "2 lower-score candidates omitted" in text

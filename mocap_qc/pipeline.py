@@ -1,11 +1,12 @@
 """Run detectors in their native sampling, then publish on the C3D timeline."""
+
 from dataclasses import dataclass
 import math
 
 from .alignment import estimate_alignment
 from .cross_checks import add_context
 from .marker_detectors import detect_markers
-from .models import Alignment
+from .models import Alignment, Event, MarkerTake, SkeletonTake
 from .numerics import map_skeleton_event
 from .readers import read_c3d, read_usd
 from .skeleton_detectors import detect_skeleton
@@ -13,10 +14,10 @@ from .skeleton_detectors import detect_skeleton
 
 @dataclass
 class Analysis:
-    markers: object
-    skeleton: object
+    markers: MarkerTake
+    skeleton: SkeletonTake
     alignment: Alignment
-    events: list
+    events: list[Event]
     min_confidence: float
     candidate_count: int
 
@@ -28,7 +29,14 @@ class Analysis:
         }
 
 
-def analyze(c3d_path, usd_path, *, min_confidence=.80, offset_frames=None, max_offset_frames=120):
+def analyze(
+    c3d_path,
+    usd_path,
+    *,
+    min_confidence=0.80,
+    offset_frames=None,
+    max_offset_frames=120,
+):
     if not math.isfinite(min_confidence) or not 0 <= min_confidence <= 1:
         raise ValueError("--min-confidence must be a finite number between 0 and 1.")
     markers = read_c3d(c3d_path)
@@ -37,9 +45,16 @@ def analyze(c3d_path, usd_path, *, min_confidence=.80, offset_frames=None, max_o
         alignment = estimate_alignment(markers, skeleton, max_offset_frames)
     else:
         # An explicit value is useful for captures with unknown marker conventions.
-        if offset_frames >= markers.frames or skeleton.times[-1] * markers.rate + offset_frames < 0:
-            raise ValueError("--offset-frames leaves no overlap with the C3D recording.")
-        alignment = Alignment(int(offset_frames), "User-supplied offset (not estimated)", 0.0)
+        if (
+            offset_frames >= markers.frames
+            or skeleton.times[-1] * markers.rate + offset_frames < 0
+        ):
+            raise ValueError(
+                "--offset-frames leaves no overlap with the C3D recording."
+            )
+        alignment = Alignment(
+            int(offset_frames), "User-supplied offset (not estimated)", 0.0
+        )
 
     candidates = detect_markers(markers)
     for event in detect_skeleton(skeleton):

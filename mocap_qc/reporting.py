@@ -1,4 +1,5 @@
 """A small artist-facing report and the exact JSON contract from the brief."""
+
 import json
 import os
 from pathlib import Path
@@ -21,46 +22,66 @@ SUGGESTIONS = {
 def markdown(analysis):
     m, s, a = analysis.markers, analysis.skeleton, analysis.alignment
     lines = [
-        "# Motion-capture quality report", "",
+        "# Motion-capture quality report",
+        "",
         f"**{len(analysis.events)} reported events.** Inputs: `{m.metadata.get('file', 'C3D')}` and `{s.metadata.get('file', 'USD')}`.",
         f"C3D: {m.frames} frames at {m.rate:g} Hz; {len(m.names)} markers. "
-        f"USD: {len(s.times)} poses at {s.rate:g} Hz; {len(s.names)} joints.", "",
-        f"**Reporting threshold: confidence >= {analysis.min_confidence*100:.12g}%.** "
+        f"USD: {len(s.times)} poses at {s.rate:g} Hz; {len(s.names)} joints.",
+        "",
+        f"**Reporting threshold: confidence >= {analysis.min_confidence * 100:.12g}%.** "
         f"Only candidates meeting this threshold are listed "
         f"({analysis.candidate_count - len(analysis.events)} lower-score candidates omitted). "
         "Confidence is a heuristic evidence score, **not a calibrated probability of error**. "
-        "No listed event is an automatic instruction to repair the take.", "",
-        f"**Time alignment: {a.offset:+d} C3D frames ({a.offset/m.rate:+.3f} s).** "
+        "No listed event is an automatic instruction to repair the take.",
+        "",
+        f"**Time alignment: {a.offset:+d} C3D frames ({a.offset / m.rate:+.3f} s).** "
         f"The first sampled USD pose corresponds to C3D frame {a.offset}. "
         f"Method: {a.method}.",
     ]
     if "half_window_offsets" in a.details:
         halves = a.details["half_window_offsets"]
-        lines.append(f"Separate first/second-half estimates: {halves[0]:+d} / {halves[1]:+d} frames.")
+        lines.append(
+            f"Separate first/second-half estimates: {halves[0]:+d} / {halves[1]:+d} frames."
+        )
     lines += [
         "Every interval below uses **inclusive, zero-based C3D frame indices**, including skeleton events. "
         "Times are seconds from C3D sample 0; the end time is the timestamp of the last included sample.",
         "Skeleton intervals are mapped to the nearest C3D sample and clipped to the C3D recording. "
         "Cross-file evidence is limited to their overlapping time range.",
         "The skeleton was solved from the markers: agreement is useful context, not independent ground truth. "
-        "**Input files have not been modified.**", "",
+        "**Input files have not been modified.**",
+        "",
     ]
     if not all(s.metadata.get(k, True) for k in ("units_authored", "axis_authored")):
-        lines += ["**Metadata caution:** USD units or up axis were not authored; OpenUSD defaults were used.", ""]
+        lines += [
+            "**Metadata caution:** USD units or up axis were not authored; OpenUSD defaults were used.",
+            "",
+        ]
     if not analysis.events:
-        lines += ["No events passed the configured threshold. This does not certify that the take is free of defects.", ""]
+        lines += [
+            "No events passed the configured threshold. This does not certify that the take is free of defects.",
+            "",
+        ]
     for i, event in enumerate(analysis.events, 1):
         targets = ", ".join(f"`{name}`" for name in event.targets)
         lines += [
-            f"## {i}. {event.type.replace('_', ' ')} â€” frames {event.start}â€“{event.end}", "",
+            f"## {i}. {event.type.replace('_', ' ')} â€” frames {event.start}â€“{event.end}",
+            "",
             f"**Targets:** {targets}  ",
-            f"**Time:** {event.start/m.rate:.3f}â€“{event.end/m.rate:.3f} s | **Confidence:** {event.confidence:.0%}", "",
-            event.note, "",
-            "**Suggested review:** " + SUGGESTIONS.get(event.type, "Review the indicated interval in the capture/animation viewer."),
+            f"**Time:** {event.start / m.rate:.3f}â€“{event.end / m.rate:.3f} s | **Confidence:** {event.confidence:.0%}",
+            "",
+            event.note,
+            "",
+            "**Suggested review:** "
+            + SUGGESTIONS.get(
+                event.type,
+                "Review the indicated interval in the capture/animation viewer.",
+            ),
             "",
         ]
     lines += [
-        "---", "",
+        "---",
+        "",
         "Detection rules, tested cases, and known limitations are documented in `NOTES.md` at the repository root. "
         "The JSON report carries the same events; this report adds review suggestions only.",
         "",
@@ -83,7 +104,10 @@ def validate_output(output_dir, input_paths):
 def write_reports(analysis, output_dir, input_paths=()):
     output_dir = validate_output(output_dir, input_paths)
     contents = {
-        "report.json": json.dumps(analysis.as_dict(), indent=2, ensure_ascii=False, allow_nan=False) + "\n",
+        "report.json": json.dumps(
+            analysis.as_dict(), indent=2, ensure_ascii=False, allow_nan=False
+        )
+        + "\n",
         "report.md": markdown(analysis),
     }
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -91,8 +115,15 @@ def write_reports(analysis, output_dir, input_paths=()):
     try:
         # Complete both serializations before touching either previous report.
         for name, content in contents.items():
-            with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", newline="\n",
-                                             dir=output_dir, prefix=".qc-", suffix=".tmp", delete=False) as stream:
+            with tempfile.NamedTemporaryFile(
+                mode="w",
+                encoding="utf-8",
+                newline="\n",
+                dir=output_dir,
+                prefix=".qc-",
+                suffix=".tmp",
+                delete=False,
+            ) as stream:
                 path = Path(stream.name)
                 temporary.append((path, output_dir / name))
                 stream.write(content)
