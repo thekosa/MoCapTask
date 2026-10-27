@@ -10,10 +10,10 @@ Names include the `A1:` prefix. Internal calculations use metres. C3D frame indi
 the report start at zero, irrespective of acquisition header numbering.
 The point residual is zero for every valid sample; it therefore cannot rank measurement
 quality here. The 61 invalid samples have negative residuals and NaN positions, all on
-RTOE at frames 2600â€“2660. Zero XYZ coordinates and zero residuals are not gaps.
+RTOE at frames 2600–2660. Zero XYZ coordinates and zero residuals are not gaps.
 
 The USD is binary USDC with one skeleton, `/A1/Skeleton`, and 60 joints.
-Its animation has 3,600 regular authored samples at timecodes 0â€“3599.
+Its animation has 3,600 regular authored samples at timecodes 0–3599.
 Both `timeCodesPerSecond` and `framesPerSecond` are 120, but the reader uses the former
 for time conversion. USD units are **0.01 metres per unit**, with authored **Y up**.
 C3D geometry is consistent with **Z up**; that is an inference, not an authored C3D axis declaration.
@@ -67,7 +67,7 @@ Distances below are physical distances after unit conversion. Robust thresholds 
   moving nearby markers, and a discontinuous entry/release exceeding 15 mm and eight
   times the typical step. Tested with held coordinates and with planted markers and
   an entirely stationary take that must remain unflagged.
-- **spike / skeleton_translation_spike:** 1â€“3 sample excursions exceeding a robust
+- **spike / skeleton_translation_spike:** 1–3 sample excursions exceeding a robust
   15 mm floor, opposing entry/exit jumps, a small jump residual, and quiet surrounding
   curvature. Root-only skeleton position checking avoids duplicate inherited alarms.
   Tested at each supported duration, with exact boundaries, noisy trajectories,
@@ -112,11 +112,11 @@ A quiet aligned joint adds 0.02 (capped at 0.97); a quiet pelvis strengthens a r
 spike to at least 0.96; a stable wrist axis strengthens a forearm excursion to 0.97.
 Position steps score 0.70 by default, 0.86 when fit RMS <=0.5 mm and jump/RMS >=50,
 or 0.88 with at least two stable-distance references changing by more than 3 mm.
-Stable references have median distance 10â€“200 mm and scaled MAD below 0.8 mm.
+Stable references have median distance 10–200 mm and scaled MAD below 0.8 mm.
 
 At the default cutoff the report contains 12 events:
-LFHD 300â€“301; LELB 1000â€“1060; RightForeArm 1200â€“1215; RIWR 1377; RKNE 1450;
-RRNG6 1707; CLAV 1778; Hips 2000; LIWR/LOWR 2200â€“2260; RTOE 2600â€“2660;
+LFHD 300–301; LELB 1000–1060; RightForeArm 1200–1215; RIWR 1377; RKNE 1450;
+RRNG6 1707; CLAV 1778; Hips 2000; LIWR/LOWR 2200–2260; RTOE 2600–2660;
 T145_cluster_LCM_5 at 2665; RTHI 3000.
 
 The four discontinuity findings were additionally inspected on local and wider XYZ

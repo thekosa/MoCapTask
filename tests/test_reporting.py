@@ -35,6 +35,9 @@ def test_exact_schema_and_human_threshold(tmp_path):
     assert "2 lower-score candidates omitted" in text
     assert "not a calibrated probability" in text
     assert "Suggested review" in text
+    assert "## 1. spike \u2014 frames 120\u2013121" in text
+    assert "1.000\u20131.008 s" in text
+    assert "\u00e2\u20ac" not in text
     before = (tmp_path / "report.json").read_bytes()
     write_reports(analysis, tmp_path)
     assert (tmp_path / "report.json").read_bytes() == before

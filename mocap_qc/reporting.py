@@ -65,10 +65,10 @@ def markdown(analysis):
     for i, event in enumerate(analysis.events, 1):
         targets = ", ".join(f"`{name}`" for name in event.targets)
         lines += [
-            f"## {i}. {event.type.replace('_', ' ')} â€” frames {event.start}â€“{event.end}",
+            f"## {i}. {event.type.replace('_', ' ')} — frames {event.start}–{event.end}",
             "",
             f"**Targets:** {targets}  ",
-            f"**Time:** {event.start / m.rate:.3f}â€“{event.end / m.rate:.3f} s | **Confidence:** {event.confidence:.0%}",
+            f"**Time:** {event.start / m.rate:.3f}–{event.end / m.rate:.3f} s | **Confidence:** {event.confidence:.0%}",
             "",
             event.note,
             "",
